@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ Download on the App Store</strong></a>
+  <a href="https://apps.apple.com/app/id6749899391"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=2024-01-01" alt="Download on the App Store" width="180" /></a>
 </p>
 
 <p align="center">

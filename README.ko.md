@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ App Store에서 다운로드</strong></a>
+  <a href="https://apps.apple.com/app/id6749899391"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&releaseDate=2024-01-01" alt="App Store에서 다운로드" width="180" /></a>
 </p>
 
 <p align="center">

@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ App Store からダウンロード</strong></a>
+  <a href="https://apps.apple.com/app/id6749899391"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&releaseDate=2024-01-01" alt="App Store からダウンロード" width="180" /></a>
 </p>
 
 <p align="center">

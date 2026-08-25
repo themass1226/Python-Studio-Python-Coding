@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Python Studio - Python Coding</title>
+<meta name="description" content="Python Studio - Python Coding. Turn your iPhone / iPad / Mac into a portable Python coding workshop.">
+<meta property="og:title" content="Python Studio - Python Coding">
+<meta property="og:description" content="Turn your iPhone / iPad / Mac into a portable Python coding workshop.">
+<meta property="og:image" content="assets/app-icon.png">
+<meta property="og:type" content="website">
+<style>
+  :root {
+    --bg: #0f1220;
+    --bg-soft: #171b2e;
+    --card: #1e2440;
+    --text: #eef1ff;
+    --text-dim: #a8b0d0;
+    --accent: #4f8cff;
+    --accent-2: #7c5cff;
+    --border: #2a3155;
+    --radius: 16px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #232b52 0%, var(--bg) 55%);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Header ---------- */
+  header { text-align: center; padding: 72px 24px 40px; }
+  .logo { width: 96px; height: 96px; border-radius: 22px; box-shadow: 0 12px 40px rgba(79,140,255,.35); margin-bottom: 24px; }
+  h1 { font-size: 42px; font-weight: 800; letter-spacing: -.5px; }
+  .tagline { font-size: 19px; color: var(--text-dim); margin-top: 14px; max-width: 640px; margin-left: auto; margin-right: auto; }
+  .badge { display: inline-block; margin-top: 28px; transition: transform .15s ease; }
+  .badge:hover { transform: translateY(-2px) scale(1.02); }
+  .badge img { height: 56px; width: auto; }
+
+  /* ---------- Language switcher ---------- */
+  .lang-switch { margin-top: 26px; display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+  .lang-switch button {
+    background: var(--card); color: var(--text-dim); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: 13px; transition: all .15s ease;
+  }
+  .lang-switch button:hover { color: var(--text); border-color: var(--accent); }
+  .lang-switch button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+  /* ---------- Sections ---------- */
+  section { padding: 44px 0; }
+  .section-title { font-size: 28px; font-weight: 700; text-align: center; margin-bottom: 34px; }
+
+  /* Features */
+  .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+  .feature {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 22px 22px 20px; transition: transform .15s ease, border-color .15s ease;
+  }
+  .feature:hover { transform: translateY(-3px); border-color: var(--accent); }
+  .feature .icon { font-size: 26px; }
+  .feature h3 { font-size: 17px; margin: 10px 0 6px; }
+  .feature p { font-size: 14px; color: var(--text-dim); }
+
+  /* Screenshots */
+  .shots-phone { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .shots-phone img { width: 200px; border-radius: 18px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+  .shots-ipad { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 28px; }
+  .shots-ipad img { width: 340px; border-radius: 14px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,.4); }
+  .sub-label { text-align: center; color: var(--text-dim); font-size: 14px; margin: 22px 0 0; }
+
+  /* Footer */
+  footer { text-align: center; padding: 48px 24px 56px; color: var(--text-dim); font-size: 13px; border-top: 1px solid var(--border); margin-top: 30px; }
+  footer a { color: var(--accent); text-decoration: none; margin: 0 10px; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 720px) {
+    h1 { font-size: 30px; }
+    .tagline { font-size: 16px; }
+    .shots-phone img { width: 150px; }
+    .shots-ipad img { width: 260px; }
+    header { padding-top: 48px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===================== HEADER ===================== -->
+<header>
+  <img class="logo" src="assets/app-icon.png" alt="Python Studio Logo">
+  <h1 data-i18n="title">Python Studio - Python Coding</h1>
+  <p class="tagline" data-i18n="tagline">Turn your iPhone / iPad / Mac into a portable Python coding workshop.</p>
+
+  <a class="badge" id="store-badge" href="https://apps.apple.com/app/id6749899391" target="_blank" rel="noopener">
+    <img id="badge-img" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/zh-cn?size=250x83&releaseDate=2024-01-01" alt="Download on the App Store">
+  </a>
+
+  <div class="lang-switch" id="lang-switch">
+    <button data-lang="zh-Hans" class="active">简体中文</button>
+    <button data-lang="en-US">English</button>
+    <button data-lang="ja">日本語</button>
+    <button data-lang="ko">한국어</button>
+    <button data-lang="es-ES">Español</button>
+  </div>
+</header>
+
+<!-- ===================== FEATURES ===================== -->
+<section id="features">
+  <div class="wrap">
+    <h2 class="section-title" data-i18n="features_title">功能亮点</h2>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3 data-i18n="f1_t">即写即运行的脚本开发</h3>
+        <p data-i18n="f1_d">无需复杂配置，在设备上直接完成 Python 脚本的编写、编辑与运行，代码效果实时呈现。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🧠</div>
+        <h3 data-i18n="f2_t">智能护航的编码辅助</h3>
+        <p data-i18n="f2_d">语法高亮、自动缩进与代码补全，从根源减少语法错误，让编码更专注、更高效。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📁</div>
+        <h3 data-i18n="f3_t">跨端协同的文件管理</h3>
+        <p data-i18n="f3_d">轻量化文件管理工具，无缝衔接电脑与手机端项目文件，文件管理告别繁琐。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🌐</div>
+        <h3 data-i18n="f4_t">边学边练的浏览器集成</h3>
+        <p data-i18n="f4_d">内置浏览器直达编程学习资源，查文档、看教程、写代码同步进行，学习效率翻倍。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🪟</div>
+        <h3 data-i18n="f5_t">灵活自由的多窗操作</h3>
+        <p data-i18n="f5_d">支持多窗口同时打开，拖拽调整位置、缩放控制大小，多任务处理游刃有余。</p>
+      </div>
+      <div class="feature">
+        <div class="icon">📓</div>
+        <h3 data-i18n="f6_t">Notebook 笔记本支持</h3>
+        <p data-i18n="f6_d">支持打开、编辑、运行 .ipynb 笔记本，无需联网即可运行 Python。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SCREENSHOTS ===================== -->
+<section id="screenshots">
+  <div class="wrap">
+    <h2 class="section-title" data-i18n="shots_title">截图</h2>
+    <p class="sub-label" data-i18n="shots_phone">iPhone</p>
+    <div class="shots-phone">
+      <img src="assets/zh-Hans/iphone-1.png" alt="iPhone 1">
+      <img src="assets/zh-Hans/iphone-2.png" alt="iPhone 2">
+      <img src="assets/zh-Hans/iphone-3.png" alt="iPhone 3">
+      <img src="assets/zh-Hans/iphone-4.png" alt="iPhone 4">
+    </div>
+    <p class="sub-label" data-i18n="shots_ipad">iPad</p>
+    <div class="shots-ipad">
+      <img src="assets/zh-Hans/ipad-1.png" alt="iPad 1">
+      <img src="assets/zh-Hans/ipad-2.png" alt="iPad 2">
+      <img src="assets/zh-Hans/ipad-3.png" alt="iPad 3">
+      <img src="assets/zh-Hans/ipad-4.png" alt="iPad 4">
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <p>
+    <a href="http://www.dazhuogroup.com/pythonstudio/privacy_statement_en.php" target="_blank" rel="noopener" data-i18n="privacy">隐私政策</a>
+    ·
+    <a href="http://www.dazhuogroup.com/pythonstudio/terms_of_use_en.php" target="_blank" rel="noopener" data-i18n="terms">使用条款</a>
+  </p>
+  <p style="margin-top:10px" data-i18n="footer">© 2026 Python Studio. All rights reserved.</p>
+</footer>
+
+<script>
+const I18N = {
+  "zh-Hans": {
+    title: "Python Studio - Python Coding",
+    tagline: "让 iPhone / iPad / Mac 变身随身 Python 编程工坊",
+    features_title: "功能亮点",
+    f1_t: "即写即运行的脚本开发", f1_d: "无需复杂配置，在设备上直接完成 Python 脚本的编写、编辑与运行，代码效果实时呈现。",
+    f2_t: "智能护航的编码辅助", f2_d: "语法高亮、自动缩进与代码补全，从根源减少语法错误，让编码更专注、更高效。",
+    f3_t: "跨端协同的文件管理", f3_d: "轻量化文件管理工具，无缝衔接电脑与手机端项目文件，文件管理告别繁琐。",
+    f4_t: "边学边练的浏览器集成", f4_d: "内置浏览器直达编程学习资源，查文档、看教程、写代码同步进行，学习效率翻倍。",
+    f5_t: "灵活自由的多窗操作", f5_d: "支持多窗口同时打开，拖拽调整位置、缩放控制大小，多任务处理游刃有余。",
+    f6_t: "Notebook 笔记本支持", f6_d: "支持打开、编辑、运行 .ipynb 笔记本，无需联网即可运行 Python。",
+    shots_title: "截图", shots_phone: "iPhone", shots_ipad: "iPad",
+    privacy: "隐私政策", terms: "使用条款", footer: "© 2026 Python Studio. 保留所有权利。"
+  },
+  "en-US": {
+    title: "Python Studio - Python Coding",
+    tagline: "Turn your iPhone / iPad / Mac into a portable Python coding workshop",
+    features_title: "Highlights",
+    f1_t: "Write & Run Scripts Instantly", f1_d: "No complex setup — write, edit and run Python scripts directly on your device with real-time output.",
+    f2_t: "Smart Coding Assistance", f2_d: "Syntax highlighting, auto-indentation and intelligent code completion reduce errors at the source.",
+    f3_t: "Cross-Device File Management", f3_d: "A lightweight file manager seamlessly connects project files between your computer and mobile device.",
+    f4_t: "Built-in Browser for Learning", f4_d: "Access programming resources without leaving the app — read docs, watch tutorials and write code side by side.",
+    f5_t: "Flexible Multi-Window", f5_d: "Open multiple windows at once, drag to reposition, pinch to resize — multitasking made easy.",
+    f6_t: "Notebook Support", f6_d: "Open, edit and run .ipynb notebooks — fully offline.",
+    shots_title: "Screenshots", shots_phone: "iPhone", shots_ipad: "iPad",
+    privacy: "Privacy Policy", terms: "Terms of Use", footer: "© 2026 Python Studio. All rights reserved."
+  },
+  "ja": {
+    title: "Pythonスタジオ - Pythonプログラミング",
+    tagline: "iPhone / iPad / Mac をポータブルな Python コーディング工房に",
+    features_title: "主な機能",
+    f1_t: "その場で書いて即実行", f1_d: "複雑な設定は不要。デバイス上で Python スクリプトの作成・編集・実行を完結し、結果をリアルタイムに確認できます。",
+    f2_t: "スマートなコーディング支援", f2_d: "シンタックスハイライト、自動インデント、コード補完で構文エラーを根本から削減します。",
+    f3_t: "デバイス間ファイル管理", f3_d: "軽量で効率的なファイルマネージャーを内蔵し、PC とモバイルのプロジェクトファイルをシームレスに連携。",
+    f4_t: "学習用ブラウザ統合", f4_d: "アプリを離れずにプログラミング学習リソースへアクセス。ドキュメント参照・チュートリアル視聴・コード作成を同時に進行。",
+    f5_t: "柔軟なマルチウィンドウ", f5_d: "複数ウィンドウを同時に開き、ドラッグで移動、ピンチでサイズ変更、分割表示でコード比較も可能。",
+    f6_t: "Notebook ノートブック対応", f6_d: ".ipynb ノートブックの開閉・編集・実行をオフラインで実行可能。",
+    shots_title: "スクリーンショット", shots_phone: "iPhone", shots_ipad: "iPad",
+    privacy: "プライバシーポリシー", terms: "利用規約", footer: "© 2026 Python Studio. 無断転載を禁じます。"
+  },
+  "ko": {
+    title: "파이썬 스튜디오 - 파이썬 프로그래밍",
+    tagline: "iPhone / iPad / Mac을 휴대용 Python 코딩 공방으로",
+    features_title: "주요 기능",
+    f1_t: "즉시 작성·즉시 실행", f1_d: "복잡한 설정 없이 기기에서 바로 Python 스크립트를 작성·편집·실행하고 결과를 실시간으로 확인할 수 있습니다.",
+    f2_t: "스마트 코딩 지원", f2_d: "구문 강조, 자동 들여쓰기, 지능형 코드 완성으로 오타와 문법 오류를 원천 차단합니다.",
+    f3_t: "기기 간 파일 관리", f3_d: "가볍고 효율적인 파일 관리 도구를 내장해 PC와 모바일의 프로젝트 파일을 매끄럽게 연결합니다.",
+    f4_t: "학습용 브라우저 통합", f4_d: "앱을 벗어나지 않고 프로그래밍 학습 자료에 접근해 문서 확인·튜토리얼 시청·코드 작성이 동시에 가능합니다.",
+    f5_t: "유연한 멀티 윈도우", f5_d: "여러 창을 동시에 열고 드래그로 이동, 핀치로 크기 조절, 분할 화면으로 코드 비교도 가능합니다.",
+    f6_t: "Notebook 노트북 지원", f6_d: ".ipynb 노트북을 오프라인으로 열고 편집·실행할 수 있습니다.",
+    shots_title: "스크린샷", shots_phone: "iPhone", shots_ipad: "iPad",
+    privacy: "개인정보 처리방침", terms: "이용약관", footer: "© 2026 Python Studio. 판권 소유."
+  },
+  "es-ES": {
+    title: "Python Studio - Código Py",
+    tagline: "Convierte tu iPhone / iPad / Mac en un taller de programación Python portátil",
+    features_title: "Características",
+    f1_t: "Escribe y ejecuta al instante", f1_d: "Sin configuración compleja, escribe, edita y ejecuta scripts de Python directamente en el dispositivo con resultados en tiempo real.",
+    f2_t: "Asistencia de codificación inteligente", f2_d: "Resaltado de sintaxis, sangría automática y autocompletado inteligente reducen los errores de raíz.",
+    f3_t: "Gestión de archivos entre dispositivos", f3_d: "Un gestor de archivos ligero y eficiente conecta sin problemas los archivos de tu proyecto entre el ordenador y el móvil.",
+    f4_t: "Navegador integrado para aprender", f4_d: "Accede a recursos de aprendizaje sin salir de la app — lee documentación, mira tutoriales y escribe código a la vez.",
+    f5_t: "Multiventana flexible", f5_d: "Abre varias ventanas a la vez, arrastra para reposicionar, haz zoom para redimensionar.",
+    f6_t: "Compatibilidad con Notebook", f6_d: "Abre, edita y ejecuta cuadernos .ipynb — totalmente sin conexión.",
+    shots_title: "Capturas", shots_phone: "iPhone", shots_ipad: "iPad",
+    privacy: "Política de privacidad", terms: "Términos de uso", footer: "© 2026 Python Studio. Todos los derechos reservados."
+  }
+};
+
+const BADGES = {
+  "zh-Hans": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/zh-cn?size=250x83&releaseDate=2024-01-01",
+  "en-US": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&releaseDate=2024-01-01",
+  "ja": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp?size=250x83&releaseDate=2024-01-01",
+  "ko": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ko-kr?size=250x83&releaseDate=2024-01-01",
+  "es-ES": "https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/es-es?size=250x83&releaseDate=2024-01-01"
+};
+
+function applyLang(lang) {
+  const t = I18N[lang] || I18N["en-US"];
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  const img = document.getElementById("badge-img");
+  if (img) img.src = BADGES[lang] || BADGES["en-US"];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("#lang-switch button").forEach(b => {
+    b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+  });
+  localStorage.setItem("ps-lang", lang);
+}
+
+document.querySelectorAll("#lang-switch button").forEach(btn => {
+  btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
+});
+
+applyLang(localStorage.getItem("ps-lang") || "zh-Hans");
+</script>
+</body>
+</html>

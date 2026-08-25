@@ -9,7 +9,7 @@
 </p>
 
 <p align="center">
-  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ 立即下载 · App Store</strong></a>
+  <a href="https://apps.apple.com/app/id6749899391"><img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/zh-cn?size=250x83&releaseDate=2024-01-01" alt="App Store 下载" width="180" /></a>
 </p>
 
 <p align="center">
