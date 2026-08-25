@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ App Store에서 다운로드</strong></a>
+</p>
+
+<p align="center">
   <a href="#주요-기능">주요 기능</a> ·
   <a href="#스크린샷">스크린샷</a> ·
   <a href="#시작하기">시작하기</a> ·

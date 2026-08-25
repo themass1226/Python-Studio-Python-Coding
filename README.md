@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ 立即下载 · App Store</strong></a>
+</p>
+
+<p align="center">
   <a href="#功能亮点">功能亮点</a> ·
   <a href="#截图">截图</a> ·
   <a href="#开始使用">开始使用</a> ·

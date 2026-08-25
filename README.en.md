@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ Download on the App Store</strong></a>
+</p>
+
+<p align="center">
   <a href="#highlights">Highlights</a> ·
   <a href="#screenshots">Screenshots</a> ·
   <a href="#getting-started">Getting Started</a> ·

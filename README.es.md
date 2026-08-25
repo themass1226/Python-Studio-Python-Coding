@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ Descargar en App Store</strong></a>
+</p>
+
+<p align="center">
   <a href="#características">Características</a> ·
   <a href="#capturas">Capturas</a> ·
   <a href="#primeros-pasos">Primeros pasos</a> ·

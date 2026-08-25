@@ -9,6 +9,10 @@
 </p>
 
 <p align="center">
+  <a href="https://apps.apple.com/app/id6749899391"><strong>⬇️ App Store からダウンロード</strong></a>
+</p>
+
+<p align="center">
   <a href="#主な機能">主な機能</a> ·
   <a href="#スクリーンショット">スクリーンショット</a> ·
   <a href="#使い方">使い方</a> ·
