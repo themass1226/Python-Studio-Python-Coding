@@ -2,7 +2,7 @@
   <img src="assets/app-icon.png" width="120" alt="PythonStudio Logo" />
 </p>
 
-<h1 align="center">PythonStudio · 모바일 Python 개발 도구</h1>
+<h1 align="center">파이썬 스튜디오 - 파이썬 프로그래밍</h1>
 
 <p align="center">
   <strong>iPhone / iPad / Mac을 휴대용 Python 코딩 공방으로</strong>

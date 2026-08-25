@@ -2,7 +2,7 @@
   <img src="assets/app-icon.png" width="120" alt="PythonStudio Logo" />
 </p>
 
-<h1 align="center">PythonStudio · モバイル向け Python 開発ツール</h1>
+<h1 align="center">Pythonスタジオ - Pythonプログラミング</h1>
 
 <p align="center">
   <strong>iPhone / iPad / Mac をポータブルな Python コーディング工房に</strong>

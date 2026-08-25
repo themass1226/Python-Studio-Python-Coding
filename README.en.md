@@ -2,7 +2,7 @@
   <img src="assets/app-icon.png" width="120" alt="PythonStudio Logo" />
 </p>
 
-<h1 align="center">PythonStudio · Python Development Tool for Mobile</h1>
+<h1 align="center">Python Studio - Python Coding</h1>
 
 <p align="center">
   <strong>Turn your iPhone / iPad / Mac into a portable Python coding workshop</strong>
