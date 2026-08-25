@@ -152,17 +152,17 @@
     <h2 class="section-title" data-i18n="shots_title">截图</h2>
     <p class="sub-label" data-i18n="shots_phone">iPhone</p>
     <div class="shots-phone">
-      <img src="assets/zh-Hans/iphone-1.png" alt="iPhone 1">
-      <img src="assets/zh-Hans/iphone-2.png" alt="iPhone 2">
-      <img src="assets/zh-Hans/iphone-3.png" alt="iPhone 3">
-      <img src="assets/zh-Hans/iphone-4.png" alt="iPhone 4">
+      <img src="assets/zh-Hans/iphone-1.png" data-shot="iphone-1.png" alt="iPhone 1">
+      <img src="assets/zh-Hans/iphone-2.png" data-shot="iphone-2.png" alt="iPhone 2">
+      <img src="assets/zh-Hans/iphone-3.png" data-shot="iphone-3.png" alt="iPhone 3">
+      <img src="assets/zh-Hans/iphone-4.png" data-shot="iphone-4.png" alt="iPhone 4">
     </div>
     <p class="sub-label" data-i18n="shots_ipad">iPad</p>
     <div class="shots-ipad">
-      <img src="assets/zh-Hans/ipad-1.png" alt="iPad 1">
-      <img src="assets/zh-Hans/ipad-2.png" alt="iPad 2">
-      <img src="assets/zh-Hans/ipad-3.png" alt="iPad 3">
-      <img src="assets/zh-Hans/ipad-4.png" alt="iPad 4">
+      <img src="assets/zh-Hans/ipad-1.png" data-shot="ipad-1.png" alt="iPad 1">
+      <img src="assets/zh-Hans/ipad-2.png" data-shot="ipad-2.png" alt="iPad 2">
+      <img src="assets/zh-Hans/ipad-3.png" data-shot="ipad-3.png" alt="iPad 3">
+      <img src="assets/zh-Hans/ipad-4.png" data-shot="ipad-4.png" alt="iPad 4">
     </div>
   </div>
 </section>
@@ -262,6 +262,9 @@ function applyLang(lang) {
   });
   const img = document.getElementById("badge-img");
   if (img) img.src = BADGES[lang] || BADGES["en-US"];
+  document.querySelectorAll("[data-shot]").forEach(el => {
+    el.src = "assets/" + lang + "/" + el.getAttribute("data-shot");
+  });
   document.documentElement.lang = lang;
   document.querySelectorAll("#lang-switch button").forEach(b => {
     b.classList.toggle("active", b.getAttribute("data-lang") === lang);
