@@ -10,7 +10,6 @@
 
 <p align="center">
   <a href="#highlights">Highlights</a> ·
-  <a href="#architecture">Architecture</a> ·
   <a href="#screenshots">Screenshots</a> ·
   <a href="#getting-started">Getting Started</a> ·
   <a href="#privacy--terms">Privacy &amp; Terms</a>
@@ -31,20 +30,8 @@ PythonStudio is built specifically for iPhone, iPad and Mac (Mac Catalyst), brin
 - **Cross-Device File Management**: A lightweight, efficient file manager seamlessly connects project files between your computer and mobile device;
 - **Built-in Browser for Learning**: Access programming resources without leaving the app — read docs, watch tutorials and write code side by side;
 - **Flexible Multi-Window**: Open multiple windows at once, drag to reposition, pinch to resize, split-screen to compare code and research simultaneously;
-- **Code Snippets (Monaco Editor)**: Built-in Monaco editor for quick code snippets with graphical output;
-- **Jupyter Notebook Support**: Built-in JupyterLite kernel to open, edit and run `.ipynb` notebooks — fully offline.
-
-## Architecture
-
-| Module | Technology |
-| --- | --- |
-| UI | UIKit / Swift / Objective-C |
-| Code Editor | Monaco Editor (embedded Web) |
-| Python Kernel | JupyterLite (WASM, runs locally, no network required) |
-| Local Server | Native BSD Socket static server (replaces Node engine) |
-| File Sync | Bidirectional sync between local filesystem and Jupyter virtual filesystem |
-| Multi-Window | Custom floating window manager (WindowControllerAdder) |
-| Cross-Screen | LAN web service + browser access |
+- **Code Snippets**: Built-in efficient code editor for quick code snippets with graphical output;
+- **Notebook Support**: Open, edit and run `.ipynb` notebooks — fully offline.
 
 ## Screenshots
 
@@ -73,7 +60,7 @@ PythonStudio is built specifically for iPhone, iPad and Mac (Mac Catalyst), brin
 > This repository contains only project introduction and metadata — no source code. It is an iOS / iPadOS / macOS (Catalyst) application.
 
 1. Search for "Python 编程" on the **App Store** or visit the official page to download;
-2. On first launch, the app automatically unpacks and initializes the local Jupyter kernel;
+2. On first launch, the app automatically completes initialization and is ready to use;
 3. Open "Code Snippets" to write and run Python code;
 4. Import `.py` / `.ipynb` / `.md` / `.csv` files for editing.
 

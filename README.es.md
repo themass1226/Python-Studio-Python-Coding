@@ -10,7 +10,6 @@
 
 <p align="center">
   <a href="#características">Características</a> ·
-  <a href="#arquitectura">Arquitectura</a> ·
   <a href="#capturas">Capturas</a> ·
   <a href="#primeros-pasos">Primeros pasos</a> ·
   <a href="#privacidad-y-términos">Privacidad y términos</a>
@@ -31,20 +30,8 @@ PythonStudio está diseñado específicamente para iPhone, iPad y Mac (Mac Catal
 - **Gestión de archivos entre dispositivos**: un gestor de archivos ligero y eficiente conecta sin problemas los archivos de tu proyecto entre el ordenador y el móvil;
 - **Navegador integrado para aprender**: accede a recursos de aprendizaje de programación sin salir de la app — lee documentación, mira tutoriales y escribe código a la vez;
 - **Multiventana flexible**: abre varias ventanas a la vez, arrastra para reposicionar, haz zoom para redimensionar y usa pantalla dividida para comparar código y consultar referencias;
-- **Fragmentos de código (editor Monaco)**: editor Monaco integrado para fragmentos rápidos de código con salida gráfica;
-- **Compatibilidad con Jupyter Notebook**: kernel JupyterLite integrado para abrir, editar y ejecutar cuadernos `.ipynb` — totalmente sin conexión.
-
-## Arquitectura
-
-| Módulo | Tecnología |
-| --- | --- |
-| Interfaz | UIKit / Swift / Objective-C |
-| Editor de código | Monaco Editor (Web integrado) |
-| Kernel Python | JupyterLite (WASM, ejecución local, sin red) |
-| Servidor local | Servidor estático BSD Socket nativo (sustituye al motor Node) |
-| Sincronización | Sincronización bidireccional entre el sistema de archivos local y el sistema virtual de Jupyter |
-| Multiventana | Gestión personalizada de ventanas flotantes (WindowControllerAdder) |
-| Pantalla cruzada | Servicio web de red local + acceso desde navegador |
+- **Fragmentos de código**: editor de código integrado y eficiente para fragmentos rápidos con salida gráfica;
+- **Compatibilidad con Notebook**: abre, edita y ejecuta cuadernos `.ipynb` — totalmente sin conexión.
 
 ## Capturas
 
@@ -73,7 +60,7 @@ PythonStudio está diseñado específicamente para iPhone, iPad y Mac (Mac Catal
 > Este repositorio contiene únicamente la introducción y los metadatos del proyecto — no incluye código fuente. Es una aplicación para iOS / iPadOS / macOS (Catalyst).
 
 1. Busca «Python 编程» en la **App Store** o visita la página oficial para descargarla;
-2. En el primer inicio, la app descomprime e inicializa automáticamente el kernel local de Jupyter;
+2. En el primer inicio, la app completa automáticamente la inicialización y queda lista para usar;
 3. Abre «Fragmentos de código» para escribir y ejecutar código Python;
 4. Importa archivos `.py` / `.ipynb` / `.md` / `.csv` para editarlos.
 
